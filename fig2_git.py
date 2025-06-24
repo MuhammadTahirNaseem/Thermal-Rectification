@@ -169,7 +169,7 @@ ax2.set_ylabel(r'$\mathcal{R}$', fontsize=22)
 ax2.legend(fontsize=14)
 ax2.grid(True)
 
-# Beautify
+# a few final touches
 for ax in [ax1, ax2]:
     ax.minorticks_on()
     ax.tick_params('both', top=True, right=True, direction='in',
