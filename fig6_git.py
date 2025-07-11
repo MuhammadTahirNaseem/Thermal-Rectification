@@ -107,8 +107,8 @@ R_all = [compute_rectification(Jf, Jr) for Jf, Jr in zip(JR_fwd_all, JR_rev_all)
 fig, ax = plt.subplots(figsize=(8, 6))
 
 ax.plot(T_values, R_3, color='blue', linestyle='solid', lw=2.5)     
-ax.plot(T_values, R_2, color='red', linestyle='dashed', lw=2.5)    
-ax.plot(T_values, R_all, color='green', linestyle='dashdot', lw=2.5)   
+ax.plot(T_values, R_2, color='red', linestyle='dashdot', lw=2.5)    
+ax.plot(T_values, R_all, color='green', linestyle='dashed', lw=2.5)   
 
 ax.set_xlabel(r'$T$', fontsize=22)
 ax.set_ylabel(r'$\mathcal{R}$', fontsize=24)
