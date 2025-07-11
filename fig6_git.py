@@ -106,9 +106,9 @@ R_all = [compute_rectification(Jf, Jr) for Jf, Jr in zip(JR_fwd_all, JR_rev_all)
 # Plotting
 fig, ax = plt.subplots(figsize=(8, 6))
 
-ax.plot(T_values, R_3, color='blue', linestyle='solid', lw=2.5)      # Solid for 3-photon
-ax.plot(T_values, R_2, color='green', linestyle='dashed', lw=2.5)    # Dashed for 2-photon
-ax.plot(T_values, R_all, color='red', linestyle='dashdot', lw=2.5)   # Dash-dot for all
+ax.plot(T_values, R_3, color='blue', linestyle='solid', lw=2.5)     
+ax.plot(T_values, R_2, color='green', linestyle='dashed', lw=2.5)    
+ax.plot(T_values, R_all, color='red', linestyle='dashdot', lw=2.5)   
 
 ax.set_xlabel(r'$T$', fontsize=22)
 ax.set_ylabel(r'$\mathcal{R}$', fontsize=24)
