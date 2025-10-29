@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Jun 21 15:18:10 2025
-
-@author: Tahir Naseem
+Updated: Distinct linestyle for each curve, clear legends
 """
 
 import numpy as np
@@ -120,5 +118,5 @@ for ax in [ax1, ax2]:
     ax.yaxis.set_major_formatter(formatter)
 
 plt.tight_layout()
-#plt.savefig("fig4.eps", dpi=600, bbox_inches='tight', transparent=True)
+plt.savefig("fig4.eps", dpi=600, bbox_inches='tight', transparent=True)
 plt.show()
