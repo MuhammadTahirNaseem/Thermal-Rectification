@@ -18,7 +18,7 @@ Gamma_L = 0.1  # Fixed value
 Gamma_R_list = [0.001, 0.01]  # Right bath variation
 
 kB = 1.0
-n_max = 50
+n_max = 35
 T_fixed = 2.0
 T_values = np.linspace(0.01, 4.0, 50)
 
@@ -127,5 +127,5 @@ for ax in [ax1, ax2]:
     ax.yaxis.set_major_formatter(formatter)
 
 plt.tight_layout()
-#plt.savefig("fig5.eps", dpi=600, bbox_inches='tight', transparent=True)
+plt.savefig("fig5.eps", dpi=600, bbox_inches='tight', transparent=True)
 plt.show()
