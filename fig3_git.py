@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Jun 21 15:16:37 2025
+Created on Sat Jun 21 12:12:32 2025
 
 @author: Tahir Naseem
 """
@@ -17,9 +17,9 @@ N = 50                 # Fock space cutoff
 omega = 1.0            # Oscillator frequency
 
 # Dissipation rates
-gamma_L = 0.2        # Single-photon rate (left)
-gamma_R = 0.2         # Single-photon rate (right)
-Gamma_L = 0.02         # Two-photon rate (left)
+gamma_L = 0.4        # Single-photon rate (left)
+gamma_R = 0.4         # Single-photon rate (right)
+Gamma_L = 0.01         # Two-photon rate (left)
 Gamma_R = 0.0          # Two-photon rate (right, disabled)
 
 # Fixed temperature of left bath
@@ -36,8 +36,8 @@ def bose(omega, T):
 # ----------------------------
 def analytic_JR(nL, mL, nR):
     A = -2 * Gamma_L
-    B = gamma_L + gamma_R + 8 * Gamma_L * mL
-    C = - (gamma_L * nL + gamma_R * nR + 4 * Gamma_L * mL)
+    B = -1*(gamma_L + gamma_R) + 2 * Gamma_L * (4*mL+1)
+    C =  (gamma_L * nL + gamma_R * nR + 4 * Gamma_L * mL)
 
     discriminant = B**2 - 4 * A * C
     if discriminant < 0:
@@ -127,5 +127,6 @@ formatter.set_powerlimits((-1, 1))
 ax1.yaxis.set_major_formatter(formatter)
 
 plt.tight_layout()
-#plt.savefig("fig3.eps", dpi=600, bbox_inches='tight', transparent=True)
+plt.savefig("fig3.eps", dpi=600, bbox_inches='tight', transparent=True)
 plt.show()
+
